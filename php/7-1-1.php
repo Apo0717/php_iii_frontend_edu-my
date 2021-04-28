@@ -26,7 +26,7 @@ echo "<hr>";
 
 //判斷某個 key 是否存在於 GET 變數當中
 if(isset($_GET['keyword'])) {
-    echo '有 $_GET[\'keyword\']';
+    echo '有 $_GET["keyword"]';
 } else {
     echo '沒有 $_GET["keyword"]';
 }

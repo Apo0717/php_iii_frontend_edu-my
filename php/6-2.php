@@ -15,7 +15,7 @@ $arr[2][2] = '22同學';
 $arr[2][3] = '23同學';
 $arr[2][4] = '24同學';
 
-for($i = 0; $i < count($arr); $i++)}{
+for($i = 0; $i < count($arr); $i++){
     for($j = 0; $j < count($arr[$i]); $j++){
         echo $arr[$i][$j] . "<br />";
     }
