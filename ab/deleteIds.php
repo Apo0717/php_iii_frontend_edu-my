@@ -3,7 +3,9 @@ require_once('./checkSession.php'); //引入判斷是否登入機制
 require_once('./db.inc.php'); //引用資料庫連線
 
 //將所有 id 透過「,」結合在一起，例如「1,2,3」
-$strIds = join(",", $_POST['chk']);
+$strIds = join(",",$POST['chk']);
+
+$count = 0 ;
 
 //記錄資料表刪除數量
 $count = 0;

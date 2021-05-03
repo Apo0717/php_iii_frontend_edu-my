@@ -1,10 +1,8 @@
 <?php
 session_start();
+require_once("./db.inc.php");
 
-//引用資料庫連線
-require_once('./db.inc.php');
-
-//預設訊息 (錯誤先行)
+//預設訊息(錯誤先行)
 $objResponse['success'] = false;
 $objResponse['info'] = "登入失敗";
 
@@ -25,6 +23,7 @@ if( isset($_POST['username']) && isset($_POST['pwd']) ){
                     WHERE `username` = ? 
                     AND `pwd` = ? 
                     AND `isActivated` = 1 ";
+                    // `isActivated` = 1 雙重認證有此帳號
         break;
     }
 
@@ -58,8 +57,8 @@ if( isset($_POST['username']) && isset($_POST['pwd']) ){
         exit();
     }
 } else {
-    $objResponse['info'] = "請確實登入…3秒後自動回登入頁";
+    $objResponse['info'] = "請確實登入???…3秒後自動回登入頁";
 }
 
-header("Refresh: 3; url=./index.php");
+header("Refresh: 2; url=./index.php");
 echo json_encode($objResponse, JSON_UNESCAPED_UNICODE);

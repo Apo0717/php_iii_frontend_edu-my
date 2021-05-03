@@ -31,7 +31,7 @@ $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 //若 page 小於 1，則回傳 1
 $page = $page < 1 ? 1 : $page;
 ?>
-<!DOCTYPE html>
+<!DOCTYPYE html>
 <html>
 <head>
     <meta charset="UTF-8">

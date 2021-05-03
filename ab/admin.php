@@ -101,8 +101,10 @@ require_once("./templates/title.php");
                 <td class="border"><?php echo $arr[$i]['studentBirthday'] ?></td>
                 <td class="border"><?php echo $arr[$i]['studentPhoneNumber'] ?></td>
                 <td class="border"><?php echo nl2br($arr[$i]['studentDescription']) ?></td>
+                <!-- nl2br(str) 將在字符串中的每個新行(\n) 之前插入HTML 換行符(<br />) -->
                 <td class="border">
-                    <img style="width: 200px;" src="./files/<?php echo $arr[$i]['studentImg'] ?>">
+                <?php if($arr[$i]['studentImg'] !== NULL) { ?>
+                    <img class="w200px" src="./files/<?php echo $arr[$i]['studentImg'] ?>">
                 <?php } ?>
                 </td>
                 <td class="border">
